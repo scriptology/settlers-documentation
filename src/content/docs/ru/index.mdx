@@ -1,0 +1,41 @@
+---
+title: Добро пожаловать в Settlers
+description: Документация по игре Settlers.
+template: splash
+hero:
+  tagline: SETTLERS превращает ваше реальное передвижение в стратегическую игру по контролю территорий. Захватывайте гексагональные территории, посещая локации, присоединяйтесь к кланам и соревнуйтесь за влияние на глобальной карте - всё через Telegram.
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: Открыть игру
+      link: https://t.me/settlers_hex_bot/game
+      icon: right-arrow
+      variant: primary
+    - text: Начать знакомство
+      link: /ru/guides/getting-started
+      icon: rocket
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Руководства по игре
+
+<CardGrid>
+	<Card title="Начало работы" icon="rocket">
+		Изучите основы SETTLERS и начните захватывать свои первые территории.
+		[Начать →](/ru/guides/getting-started)
+	</Card>
+	<Card title="Игровая механика" icon="open-book">
+		Поймите состояния гексов, механику захвата и систему перезарядки.
+		[Подробнее →](/ru/guides/game-mechanics)
+	</Card>
+	<Card title="Система кланов" icon="comment">
+		Присоединяйтесь или создавайте клан, управляйте территориями вместе и расширяйте влияние.
+		[Узнать больше →](/ru/guides/clan-system)
+	</Card>
+	<Card title="Система территорий" icon="list-format">
+		Освойте трехслойную систему карты и механику контроля территорий.
+		[Детали →](/ru/guides/territory-system)
+	</Card>
+</CardGrid> 
