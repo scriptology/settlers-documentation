@@ -9,7 +9,7 @@ export default defineConfig({
 		starlight({
 			title: {
 				en: 'Settlers Docs',
-				ru: 'Документация Settlers'
+				ru: 'Settlers Docs'
 			},
 			defaultLocale: 'ru', // основной язык сайта
 			locales: {
