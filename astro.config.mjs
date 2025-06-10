@@ -69,5 +69,10 @@ export default defineConfig({
                 autogenerate: { directory: 'reference' },
             },
         ],
-		}), icon()],
+		}), icon({
+			include: {
+				mdi: ['*'],
+				uis: ['*'],
+			}
+		})],
 });
