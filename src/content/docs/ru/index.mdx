@@ -5,7 +5,9 @@ template: splash
 hero:
   tagline: SETTLERS превращает ваше реальное передвижение в стратегическую игру по контролю территорий. Захватывайте гексагональные территории, посещая локации, присоединяйтесь к кланам и соревнуйтесь за влияние на глобальной карте - всё через Telegram.
   image:
-    file: ../../../assets/map-screen.webp
+    file: ../../../assets/main-hexes.webp
+    alt: Интерфейс карты Settlers
+    widths: [400, 800]
   actions:
     - text: Открыть игру
       link: https://t.me/settlers_hex_bot/game
@@ -17,26 +19,35 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import { Icon } from 'astro-icon/components';
+import CustomCard from '../../../components/CustomCard.astro';
 
 ## Руководства по игре
 
 <CardGrid>
-	<Card title="Начало работы" icon="rocket">
+	<CustomCard title="Начало работы" icon="mdi:rocket-launch">
 		Изучите основы SETTLERS и начните захватывать свои первые территории.
 		[Начать →](/ru/guides/getting-started)
-	</Card>
-
-	<Card title="Система территорий" icon="list-format">
-		Освойте трехслойную систему карты и механику контроля территорий.
-		[Детали →](/ru/guides/territory-system)
-	</Card>
-	<Card title="Система кланов" icon="comment">
-		Присоединяйтесь или создавайте клан, управляйте территориями вместе и расширяйте влияние.
-		[Узнать больше →](/ru/guides/clan-system)
-	</Card>
-	<Card title="Игровая механика" icon="open-book">
+	</CustomCard>
+	<CustomCard title="Игровая механика" icon="ri:gamepad-fill">
 		Поймите состояния гексов, механику захвата и систему перезарядки.
 		[Подробнее →](/ru/guides/game-mechanics)
-	</Card>
+	</CustomCard>
+	<CustomCard title="Система кланов" icon="ri:group-fill">
+		Присоединяйтесь или создавайте клан, управляйте территориями вместе и расширяйте влияние.
+		[Узнать больше →](/ru/guides/clan-system)
+	</CustomCard>
+	<CustomCard title="Система территорий" icon="mdi:map-marker-radius">
+		Освойте трехслойную систему карты и механику контроля территорий.
+		[Детали →](/ru/guides/territory-system)
+	</CustomCard>
+	<CustomCard title="Реферальная система" icon="mdi:account-multiple-plus">
+		Приглашайте друзей, получайте награды и развивайте сообщество SETTLERS вместе.
+		[Узнать больше →](/ru/guides/referral-system)
+	</CustomCard>
+	<CustomCard title="План развития" icon="mdi:road-variant">
+		Узнайте о предстоящих функциях и будущем развитии SETTLERS.
+		[Посмотреть план →](/ru/guides/roadmap)
+	</CustomCard>
 </CardGrid>

@@ -12,15 +12,15 @@ export default defineConfig({
             en: 'Settlers Docs',
             ru: 'Settlers Docs'
         },
-        defaultLocale: 'en', // основной язык сайта
+        defaultLocale: 'root',
         locales: {
-            // Английская документация в src/content/docs/en/
-            en: {
+            root: {
                 label: 'English',
+                lang: 'en'
             },
-            // Русская документация в src/content/docs/ru/
             ru: {
                 label: 'Русский',
+                lang: 'ru'
             },
         },
         social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/scriptology/settlers-documentation' }],
@@ -59,6 +59,20 @@ export default defineConfig({
                         },
                         link: '/guides/territory-system'
                     },
+                    {
+                        label: 'Referral System',
+                        translations: {
+                            ru: 'Реферальная система'
+                        },
+                        link: '/guides/referral-system'
+                    },
+                    {
+                        label: 'Roadmap',
+                        translations: {
+                            ru: 'План развития'
+                        },
+                        link: '/guides/roadmap'
+                    }
                 ],
             },
             {
