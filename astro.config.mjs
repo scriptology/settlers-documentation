@@ -23,7 +23,7 @@ export default defineConfig({
                 lang: 'ru'
             },
         },
-        social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/scriptology/settlers-documentation' }],
+        social: [{ icon: 'telegram', label: 'Telegram', href: 'https://t.me/settlers_channel' }],
         sidebar: [
             {
                 label: 'Guides',
