@@ -12,7 +12,7 @@ export default defineConfig({
             en: 'Settlers Docs',
             ru: 'Settlers Docs'
         },
-        defaultLocale: 'ru', // основной язык сайта
+        defaultLocale: 'en', // основной язык сайта
         locales: {
             // Английская документация в src/content/docs/en/
             en: {
@@ -73,6 +73,7 @@ export default defineConfig({
 			include: {
 				mdi: ['*'],
 				uis: ['*'],
+				ri: ['*'],
 			}
 		})],
 });

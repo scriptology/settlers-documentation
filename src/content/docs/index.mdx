@@ -5,7 +5,7 @@ template: splash
 hero:
   tagline: SETTLERS transforms your real-world movement into a strategic territory control game. Capture hexagonal territories by visiting locations, join clans, and compete for influence on the global map - all through Telegram.
   image:
-    file: ../../assets/map-screen.webp
+    file: ../../assets/main-hexes.webp
     alt: Settlers game map interface
     widths: [400, 800]
   actions:
@@ -19,27 +19,35 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-import { Icon } from 'astro-icon/components'
+import { CardGrid } from '@astrojs/starlight/components';
+import { Icon } from 'astro-icon/components';
+import CustomCard from '../../components/CustomCard.astro';
 
 ## Game Guides
 
 <CardGrid>
-	<Card title="Getting Started" icon="rocket">
+	<CustomCard title="Getting Started" icon="mdi:rocket-launch">
 		Learn the basics of SETTLERS and start capturing your first territories.
 		[Get Started →](/guides/getting-started)
-	</Card>
-	<Card title="Game Mechanics" icon="open-book">
+	</CustomCard>
+	<CustomCard title="Game Mechanics" icon="ri:gamepad-fill">
 		Understand hex states, capture mechanics, and cooldown system.
 		[Learn More →](/guides/game-mechanics)
-	</Card>
-	<Card title="Clan System" icon="comment">
+	</CustomCard>
+	<CustomCard title="Clan System" icon="ri:group-fill">
 		Join or create a clan, manage territories together, and grow your influence.
 		[Explore Clans →](/guides/clan-system)
-	</Card>
-	<Card title="Territory System" icon="uis:border-bottom">
-		<Icon name="uis:border-bottom" />
+	</CustomCard>
+	<CustomCard title="Territory System" icon="mdi:map-marker-radius">
 		Master the three-layer map system and territory control mechanics.
 		[View Details →](/guides/territory-system)
-	</Card>
+	</CustomCard>
+	<CustomCard title="Referral System" icon="mdi:account-multiple-plus">
+		Invite friends, earn rewards, and grow the SETTLERS community together.
+		[Learn More →](/guides/referral-system)
+	</CustomCard>
+	<CustomCard title="Roadmap" icon="mdi:road-variant">
+		Explore upcoming features and the future development of SETTLERS.
+		[View Roadmap →](/guides/roadmap)
+	</CustomCard>
 </CardGrid>
