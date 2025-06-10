@@ -1,0 +1,84 @@
+---
+title: Game Mechanics
+description: Detailed explanation of SETTLERS core mechanics, hex states and capture system.
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+## Overview
+
+SETTLERS uses a hexagonal territory system with various states and capture mechanics. This document explains the core elements of gameplay.
+
+:::caution[Important]
+To play SETTLERS you must allow access to geolocation and physically be in the hex you want to capture. Spoofing geolocation is prohibited and may result in account restrictions.
+:::
+
+## Hex States
+
+Each hex in the game can be in one of the following states:
+
+### 1. Unclaimed
+- Empty hex without owner
+- Available for immediate capture
+
+### 2. Your Hex
+- Personally captured by you
+- Part of your territory
+
+### 3. Clan Member Hex
+- Captured by a member of your clan
+- Contributes to clan territory
+
+### 4. Other Clan Hex
+- Captured by a member of another clan
+- Can be captured after cooldown period
+
+### 5. Other Player Hex
+- Captured by a player not from your clan
+- Can be captured after cooldown period
+
+### 6. Cooldown <Badge text="TBI" />
+- Recently captured hex
+- Protected for 1 hour
+- Capture impossible during this period
+
+## Capture Mechanics
+
+:::note
+Each hex can have only one owner at a time. When you capture a hex, the previous owner immediately loses control over it.
+:::
+
+### Capture Process
+1. Move to the desired hex
+2. Press the "Settle" button
+3. Wait for confirmation
+
+:::tip
+To maximize your territory, try to capture hexes that connect with your existing territory. Connected hexes are more valuable for clan control calculations.
+:::
+
+### Results
+- You become the new owner
+- Hex joins your clan's territory (if applicable)
+- 1-hour capture immunity begins
+- Previous owner loses the hex
+
+## Clan Dynamics
+
+- Clan members can capture hexes from each other
+- Hex remains under clan control when captured by clan member
+- Only individual ownership changes
+- Clan territory remains intact
+
+## Cooldown System
+
+The cooldown system protects recently captured territories:
+
+:::caution[Important]
+Each hex enters a 1-hour protection period immediately after capture. During this time NO ONE can capture the hex - not even clan members.
+:::
+
+- Duration: 1 hour after capture
+- Protection: Capture impossible during cooldown
+- Visibility: Timer visible to all players
+- Purpose: Prevents immediate re-capture 
