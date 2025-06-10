@@ -1,20 +1,23 @@
 ---
 import { Icon } from 'astro-icon/components'
-
+import { Badge } from '@astrojs/starlight/components';
 
 interface Props {
 	icon?: string;
 	title: string;
+	badge?: string;
 }
 
-const { icon, title } = Astro.props;
+const { icon, title, badge } = Astro.props;
 ---
 
 <article class="card sl-flex">
+	{badge && <div class="badge-wrapper"><Badge text={badge} /></div>}
 	<p class="title sl-flex">
 		{icon && <Icon name={icon} class="icon" size="1.333em" />}
 		<span set:html={title} />
 	</p>
+	
 	<div class="body"><slot /></div>
 </article>
 
@@ -62,6 +65,11 @@ const { icon, title } = Astro.props;
 		.card .body {
 			margin: 0;
 			font-size: clamp(var(--sl-text-sm), calc(0.5rem + 1vw), var(--sl-text-body));
+		}
+		.badge-wrapper {
+			display: flex;
+			justify-content: flex-start;
+			margin-top: -0.5rem;
 		}
 	}
 </style>
